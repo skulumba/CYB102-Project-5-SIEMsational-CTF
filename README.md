@@ -1,4 +1,4 @@
-![Image Alt Text](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/raw/main/logo.JPG)
+![Image Alt Text](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/raw/main/cyber102/logo.JPG)
 
 ## Project Description
 In this project I will be searching, analyzing, and visualizing data using Splunk. The project aims to provide hands-on experience with Splunk's capabilities, enhancing critical thinking and problem-solving skills through real-world data scenarios.
