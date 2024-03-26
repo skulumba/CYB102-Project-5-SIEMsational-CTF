@@ -25,18 +25,14 @@ index=main host=Netflix
 👥 ***Challenge 1:** How many TV shows on Netflix are in the Docuseries genre?*
 
 **Query:**
-![Image Alt Text](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/raw/main/cyber102/q1.png)
 ```spl
 index=main host=Netflix type="TV Show" listed_in="Docuseries"
 | stats count AS "Num_Tvshows_Docuseries"
 ```
 **Result:**
+
 ![Image Alt Text](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/raw/main/cyber102/r1.png)
-```spl
-| Num_Tvshows_Docuseries|
-|-----------------------|
-| 85                    |
-```
+
 
 👥 ***Challenge 2:** How many movies on Netflix have a rating of TV-PG?*
 
