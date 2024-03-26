@@ -1,13 +1,20 @@
 ![Image Alt Text](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/raw/main/cyber102/logo.JPG)
 
 ## Project Description
-In this project I will be searching, analyzing, and visualizing data using Splunk. The project aims to provide hands-on experience with Splunk's capabilities, enhancing critical thinking and problem-solving skills through real-world data scenarios.
+Splunk  In this project I will be searching, and analyzing log data using Splunk. This project aims to demonstrate the power and versatility of Splunk in aggregating, searching, and analyzing log data from various sources!
 
+## Technologies Used:
+- Splunk Enterprise
+- Splunk Search Processing Language (SPL)
+  
 ## Goals
 - Apply Splunk search, analysis, and visualization techniques to solve real-world problems.
 - Improve critical thinking and problem-solving skills.
 - Gain experience with searching and analyzing data in a competitive environment.
 - Develop a deeper understanding of Splunk's capabilities.
+
+
+
 
 ## 🤔 Reflection
 If I had to explain "what is SIEM" in 3 emojis, they would be...
@@ -25,66 +32,57 @@ index=main host=Netflix
 👥 ***Challenge 1:** How many TV shows on Netflix are in the Docuseries genre?*
 
 **Query:**
-```spl
-index=main host=Netflix type="TV Show" listed_in="Docuseries"
-| stats count AS "Num_Tvshows_Docuseries"
-```
-**Result:**
 
-![Image Alt Text](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/raw/main/cyber102/r1.png)
+![image](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/assets/75015106/342a248e-ceb4-4d84-aee9-8274f7981428)
+
+**Result:** 
+
+![image](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/assets/75015106/4fc2e9f0-2dce-47c1-b653-8f59d131592d)
+
 
 
 👥 ***Challenge 2:** How many movies on Netflix have a rating of TV-PG?*
 
 **Query:**
-```spl
-index=main host=Netflix type="Movie" rating="TV-PG" | stats count AS "Num_Movies-TV-PG"
-```
+
+![image](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/assets/75015106/4ad37fd4-28a7-41e0-84cb-3ecd2712cf03)
+
 **Result:**
-```spl
-| Num_Movies-TV-PG |
-|------------------|
-|        540       |
-```
+
+![image](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/assets/75015106/2015fd3f-4cbb-445e-8005-45ae41e88a79)
+
 👥 ***Challenge 3:** How many movies on Netflix were released in the year 2020?*
 
 **Query:**
-```spl
-index=main host=Netflix type="Movie" release_year="2020"
-| stats count AS "2020_Releases"
-```
+
+![image](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/assets/75015106/3ea1720f-1c27-44c8-8cc9-d81ebf7cbd91)
+
 **Result:**
-```spl
-| 2020_Releases |
-|---------------|
-|      517      |
-```
+
+![image](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/assets/75015106/b62ca856-e9b0-444d-ab1c-2c81dcbc39ee)
+
+
 👥 ***Challenge 4:** What is the longest duration by season on Netflix, and what is its TV rating?*
 
 **Query:**
-```spl
-index=main host=Netflix type="TV Show" | stats max(duration) as max_duration by title, rating
-| sort -max_duration | head 1
-```
+
+![image](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/assets/75015106/5113273c-fa6b-4da2-8b32-8df9fc4233f2)
+
 **Result:**
-```spl
-|         title         | rating | max_duration |
-|-----------------------|--------|--------------|
-|   Grey's Anatomy      | TV-14  |  17 Seasons  |
-```
+
+![image](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/assets/75015106/0900272e-5f2b-468a-9724-e0befcf1b54a)
+
+
 👥 ***Challenge 5:** How many movies on Netflix are listed as action and are rated PG-13?*
 
 **Query:**
-```spl
-index=main host=Netflix type="Movie" listed_in="Action & Adventure" rating="PG-13"
-| stats count AS "Num_Action_PG-13"
-```
+
+![image](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/assets/75015106/84b007cd-7ce7-419e-947e-defafadc2f03)
+
 **Result:**
-```spl
-| Num_Action_PG-13 |
-|------------------|
-|        23        |
-```
+
+![image](https://github.com/skulumba/CYB102-Project-5-SIEMsational-CTF/assets/75015106/ff8b7e7d-ec45-45b6-9a25-cd5a92d236c5)
+
 👥 ***Challenge 6:** How many movies and TV shows on Netflix have their country of origin as Turkey?*
 
 **Query:**
