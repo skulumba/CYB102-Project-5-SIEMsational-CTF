@@ -26,7 +26,8 @@ index=main host=Netflix
 
 **Query:**
 ```spl
-index=main host=Netflix type="TV Show" listed_in="Docuseries" | stats count AS "Num_Tvshows_Docuseries"
+index=main host=Netflix type="TV Show" listed_in="Docuseries"
+| stats count AS "Num_Tvshows_Docuseries"
 ```
 **Result:**
 ```spl
@@ -51,7 +52,8 @@ index=main host=Netflix type="Movie" rating="TV-PG" | stats count AS "Num_Movies
 
 **Query:**
 ```spl
-index=main host=Netflix type="Movie" release_year="2020" | stats count AS "2020_Releases"
+index=main host=Netflix type="Movie" release_year="2020"
+| stats count AS "2020_Releases"
 ```
 **Result:**
 ```spl
